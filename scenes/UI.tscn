@@ -3,9 +3,7 @@
 [ext_resource path="res://src/ui.gd" type="Script" id=1]
 [ext_resource path="res://resources/icon.png" type="Texture" id=2]
 
-
-
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.137255, 0.0313726, 0.211765, 1 )
 
 [node name="UI" type="Control"]
@@ -37,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 
 [node name="UpgradeMenuButton" type="TextureButton" parent="Panel"]
 margin_left = 9.52271
