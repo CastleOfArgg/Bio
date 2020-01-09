@@ -32,10 +32,13 @@ export var damage := 10
 export var value := 5
 export var weight := 5000
 export var points := 0
+<<<<<<< HEAD
 export var starting_color := Color()
 export(float, 0, 1) var color_blend_weight := 0.0
 export var color_to_blend := Color(0.0,0.0,0.0,0.0)
 export var color_revert := 2.0
+=======
+>>>>>>> parent of 9de2ff7... test
 
 #movement
 var movement := Vector2()
