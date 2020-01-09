@@ -34,6 +34,7 @@ weight = 2000
 starting_color = Color( 0, 1, 0.470588, 1 )
 color_blend_weight = 1.0
 color_to_blend = Color( 0.529412, 0.65098, 0, 1 )
+color_revert = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
