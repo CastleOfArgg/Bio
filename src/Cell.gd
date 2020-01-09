@@ -32,6 +32,7 @@ export var damage := 10
 export var value := 5
 export var weight := 5000
 export var points := 0
+export var color := Color(0.0,0.0,0.0,1.0)
 
 #movement
 var movement := Vector2()
