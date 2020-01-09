@@ -1,15 +1,16 @@
 Chlorophyll
 	Turn green after eating with a timer
+	Keep adding score at a set speed
 	Add option evolving chlorophyll synthesis pathway
 		which keep turning the cell green when equiped
 
 Tail
-	Add speed in expance of score, help with escaping enamy
+	Add speed in expance of score, help with escaping enemy
 
 Cell Wall
 	Reduce colliding damage
 	Evolving before aquire chlorophyll synthesis pathway, cell turns into Gram+ bacteria
-	Evolving after aquire chlorophyll synthesis pathway, cell turns into algea
+	Evolving after aquire chlorophyll synthesis pathway, cell turns into algea, reduce mobility
 
 Mitochondria
 	Option apear after evolving tail
