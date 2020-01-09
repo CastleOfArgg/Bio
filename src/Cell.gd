@@ -32,7 +32,8 @@ export var damage := 10
 export var value := 5
 export var weight := 5000
 export var points := 0
-export var color := Color(0.0,0.0,0.0,1.0)
+export(float, 0, 1) var color_blend_weight := 0.0
+export var color_to_blend := Color(0.0,0.0,0.0,0.0)
 
 #movement
 var movement := Vector2()
@@ -177,8 +178,11 @@ func _on_Area2D_body_entered(body):
 			Globals.emit_signal(Globals.signal_pain_string)
 		if body.pain(damage):
 			give_points(body.value)
+			body.blend(color_to_blend, color_blend_weight)
 			body.die()
 
+func blend(color:Color, weight:float)->void:
+	icon.material.set("shader_param/color", lerp(icon.material.get("shader_param/color"), color, weight))
 
 func pain(damage:int) -> bool:
 	if damage > 0:
