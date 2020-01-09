@@ -23,7 +23,7 @@ _global_script_class_icons={
 config/name="Bio"
 run/main_scene="res://scenes/Main.tscn"
 boot_splash/image="res://resources/icon.png"
-config/icon="res://icon.png"
+config/icon="res://resources/icon.png"
 
 [autoload]
 
