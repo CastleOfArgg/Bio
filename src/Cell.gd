@@ -72,6 +72,7 @@ func _ready():
 	icon = get_node("icon")
 	rotate(randf() * 2*PI)
 	icon.material = icon.material.duplicate()
+	icon.material.set("shader_param/color", starting_color)
 	icon.material.set(
 		"shader_param/idle_move_speed", 
 		Vector2(randf() * idle_move_speed - idle_move_speed/2.0, randf() * idle_move_speed - idle_move_speed/2.0)

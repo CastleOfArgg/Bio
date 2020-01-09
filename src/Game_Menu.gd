@@ -38,12 +38,12 @@ func init_att_page()->void:
 	var num := 0
 	for name in Globals.player.my_attribute_details:
 		var att = Attribute_Entrty_Scene.instance()
-		att.rect_position.x = 100
-		att.rect_position.y = 100 * (num + 1)
+		att.rect_position.x = 0
+		att.rect_position.y = 75 * (num + 1)
 		att.set_parent(self, "_on_Att_Button_pressed")
 		att.set_name(name)
 		att.update()
-		add_child(att)
+		$Panel/AttributePage.add_child(att)
 		num = num + 1
 
 func init_info_page()->void:
