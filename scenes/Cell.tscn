@@ -26,8 +26,8 @@ radius = 32.9299
 [node name="Cell" type="KinematicBody2D"]
 script = ExtResource( 1 )
 is_player = true
-starting_color = Color( 0.898039, 0.105882, 0.105882, 1 )
-color_revert = 0.39
+starting_color = Color( 0.399382, 0.414704, 0.644531, 1 )
+color_revert = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 7.16972, 8.96215 )
