@@ -21,13 +21,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Bio"
-run/main_scene="res://src/Main.tscn"
+run/main_scene="res://scenes/Main.tscn"
+boot_splash/image="res://resources/icon.png"
 config/icon="res://icon.png"
 
 [autoload]
 
-Constants="*res://Constants.gd"
-Globals="*res://Globals.gd"
+Constants="*res://src/Constants.gd"
+Globals="*res://src/Globals.gd"
 
 [debug]
 

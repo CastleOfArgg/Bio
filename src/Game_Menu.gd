@@ -1,6 +1,6 @@
 extends Control
 
-var Attribute_Entrty_Scene = preload("res://AttributeEntry.tscn")
+var Attribute_Entrty_Scene = preload("res://scenes/AttributeEntry.tscn")
 
 var language := 0 setget change_language
 ###UPDATE get_player_value() ON ANY CHANGES TO attributes!!!!!

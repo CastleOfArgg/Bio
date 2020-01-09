@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://ui.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://src/ui.gd" type="Script" id=1]
+[ext_resource path="res://resources/icon.png" type="Texture" id=2]
+
+
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.137255, 0.0313726, 0.211765, 1 )

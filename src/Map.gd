@@ -1,6 +1,6 @@
 extends Node2D
 
-var Tile := load("res://Tile.tscn")
+var Tile := preload("res://scenes/Tile.tscn")
 
 var MapWidth := 10
 var MapHeight := 10
