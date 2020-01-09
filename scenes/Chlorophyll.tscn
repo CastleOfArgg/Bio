@@ -31,9 +31,9 @@ health = 1
 damage = 0
 value = 0
 weight = 2000
-starting_color = Color( 0.184314, 0.721569, 0.0901961, 1 )
-color_blend_weight = 0.1
-color_to_blend = Color( 0.427451, 0.843137, 0.113725, 1 )
+starting_color = Color( 0, 1, 0.470588, 1 )
+color_blend_weight = 1.0
+color_to_blend = Color( 0.529412, 0.65098, 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
