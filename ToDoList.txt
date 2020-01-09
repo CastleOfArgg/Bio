@@ -1,0 +1,24 @@
+Chlorophyll
+	Turn green after eating with a timer
+	Add option evolving chlorophyll synthesis pathway
+		which keep turning the cell green when equiped
+
+Tail
+	Add speed in expance of score, help with escaping enamy
+
+Cell Wall
+	Reduce colliding damage
+	Evolving before aquire chlorophyll synthesis pathway, cell turns into Gram+ bacteria
+	Evolving after aquire chlorophyll synthesis pathway, cell turns into algea
+
+Mitochondria
+	Option apear after evolving tail
+	Aquired after bouncing into cells without tail, and choose cohabitat instead of fighting
+	Get more score after eat sugar
+
+Emerging of sugar and other cells, and chlorophyll in some regions
+Movements of other cells
+
+Nucleus evelope
+	Option aviliabal after evolving chlorophyll or mitochondria
+	Final evolution in this part of the game, cell turns into eukaryotes
