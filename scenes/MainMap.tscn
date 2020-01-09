@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Map.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Cell.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Game_Menu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Main_Menu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Chlorophyll.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
@@ -75,3 +76,6 @@ visible = false
 
 [node name="Main_Menu" parent="." instance=ExtResource( 9 )]
 visible = false
+
+[node name="Chlorophyll" parent="." instance=ExtResource( 10 )]
+position = Vector2( 329, 235 )

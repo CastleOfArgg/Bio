@@ -32,8 +32,10 @@ export var damage := 10
 export var value := 5
 export var weight := 5000
 export var points := 0
+export var starting_color := Color()
 export(float, 0, 1) var color_blend_weight := 0.0
 export var color_to_blend := Color(0.0,0.0,0.0,0.0)
+export var color_revert := 2.0
 
 #movement
 var movement := Vector2()
@@ -78,6 +80,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	moving()
+	icon.material.set("shader_param/color", lerp(icon.material.get("shader_param/color"), starting_color, delta * color_revert))
 	icon.material.set("shader_param/movement_force", movement_force)
 	if is_colliding:
 		icon.material.set("shader_param/collision_force", collision_force)
@@ -178,7 +181,8 @@ func _on_Area2D_body_entered(body):
 			Globals.emit_signal(Globals.signal_pain_string)
 		if body.pain(damage):
 			give_points(body.value)
-			body.blend(color_to_blend, color_blend_weight)
+			blend(body.color_to_blend, body.color_blend_weight)
+			print(color_blend_weight)
 			body.die()
 
 func blend(color:Color, weight:float)->void:
