@@ -12,7 +12,7 @@
 [ext_resource path="res://scenes/Chlorophyll.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 4 )
+shader = ExtResource( 5 )
 shader_param/col = Plane( 1, 0, 0, 0 )
 shader_param/radius_1 = 0.2
 shader_param/radius_2 = 0.85
@@ -56,6 +56,9 @@ position = Vector2( 538.563, 111.907 )
 [node name="Sugar8" parent="Actors" instance=ExtResource( 3 )]
 position = Vector2( 451.137, 342.53 )
 
+[node name="Chlorophyll" parent="Actors" instance=ExtResource( 4 )]
+position = Vector2( 396, 233 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 509.481, 301.719 )
 current = true
@@ -64,17 +67,17 @@ current = true
 material = SubResource( 1 )
 position = Vector2( 2.61913, 10.6255 )
 scale = Vector2( 17.1655, 10.5836 )
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
 total_time = 0.05
 hold_time = 0.05
 
-[node name="UI" parent="." instance=ExtResource( 7 )]
+[node name="UI" parent="." instance=ExtResource( 8 )]
 
-[node name="Game_Menu" parent="." instance=ExtResource( 8 )]
+[node name="Game_Menu" parent="." instance=ExtResource( 9 )]
 visible = false
 
-[node name="Main_Menu" parent="." instance=ExtResource( 9 )]
+[node name="Main_Menu" parent="." instance=ExtResource( 10 )]
 visible = false
 
 [node name="Chlorophyll" parent="." instance=ExtResource( 10 )]
