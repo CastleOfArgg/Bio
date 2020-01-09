@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Cell.gd" type="Script" id=1]
+[ext_resource path="res://Cell.shader" type="Shader" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Dna.gd" type="Script" id=4]
+[ext_resource path="res://my_area2D.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.0218
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+shader_param/movement_force = Vector2( -0.48, 0.17 )
+shader_param/collision_force = Vector2( 0, 0 )
+shader_param/idle_move_speed = Vector2( 0, 0 )
+shader_param/color = Color( 0, 1, 0, 1 )
+shader_param/color_border = Color( 0.0156863, 0.705882, 0.0156863, 1 )
+shader_param/c_radius_1 = 0.2
+shader_param/c_radius_2 = 0.255
+shader_param/c_radius_3 = 0.3
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 32.9299
+
+[node name="Cell" type="KinematicBody2D"]
+script = ExtResource( 1 )
+is_player = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7.16972, 8.96215 )
+shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="."]
+material = SubResource( 2 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )
+
+[node name="Inerds" type="Node2D" parent="."]
+
+[node name="Dna" type="Node2D" parent="Inerds"]
+position = Vector2( -8.13588, 8.5233 )
+script = ExtResource( 4 )
+
+[node name="icon" type="Sprite" parent="Inerds/Dna"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1.79245, 3.22636 )
+script = ExtResource( 5 )
+path = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

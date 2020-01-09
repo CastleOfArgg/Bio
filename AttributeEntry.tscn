@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://AttributeEntry.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="Att" type="Control"]
+margin_right = 378.0
+margin_bottom = 87.0
+script = ExtResource( 1 )
+
+[node name="Button" type="TextureButton" parent="."]
+margin_left = 31.0
+margin_top = 11.0
+margin_right = 99.0
+margin_bottom = 75.0
+texture_normal = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 114.0
+margin_top = 15.0
+margin_right = 191.0
+margin_bottom = 41.0
+rect_scale = Vector2( 3.66022, 2.31124 )
+text = "Att Name"

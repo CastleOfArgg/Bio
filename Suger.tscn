@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Cell.gd" type="Script" id=1]
+[ext_resource path="res://Cell.shader" type="Shader" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://my_area2D.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.0218
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+shader_param/movement_force = Vector2( -0.48, 0.17 )
+shader_param/collision_force = Vector2( 0, 0 )
+shader_param/idle_move_speed = Vector2( 0, 0 )
+shader_param/color = Color( 0.494118, 0.490196, 0.458824, 1 )
+shader_param/color_border = Color( 0, 0, 0, 1 )
+shader_param/c_radius_1 = 0.2
+shader_param/c_radius_2 = 0.255
+shader_param/c_radius_3 = 0.3
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 32.9299
+
+[node name="Sugar" type="KinematicBody2D"]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 1 )
+idle_move_speed = 10.0
+cell_type = "Sugar"
+health = 1
+damage = 0
+value = 1
+weight = 2000
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="."]
+material = SubResource( 2 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 4 )
+path = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]

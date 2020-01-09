@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.137255, 0.0313726, 0.211765, 1 )
+
+[node name="UI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 18.65
+margin_top = 523.61
+margin_right = 108.65
+margin_bottom = 538.61
+rect_scale = Vector2( 2, 4 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+text = "Score: 00"
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 760.426
+margin_top = 462.79
+margin_right = 960.426
+margin_bottom = 542.79
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="UpgradeMenuButton" type="TextureButton" parent="Panel"]
+margin_left = 9.52271
+margin_top = 8.16229
+margin_right = 73.5227
+margin_bottom = 72.1623
+texture_normal = ExtResource( 2 )
+
+[node name="MainMenuButton" type="TextureButton" parent="Panel"]
+margin_left = 81.6227
+margin_top = 9.52264
+margin_right = 145.623
+margin_bottom = 73.5226
+texture_normal = ExtResource( 2 )
+[connection signal="pressed" from="Panel/UpgradeMenuButton" to="." method="_on_UpgradeMenuButton_pressed"]
+[connection signal="pressed" from="Panel/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
